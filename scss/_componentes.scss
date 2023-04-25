@@ -1,0 +1,109 @@
+@mixin title{
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: var(--color-title-text);
+}
+@mixin text{
+    font-family: 'Open Sans';
+    color: var(--color-title-text);
+    font-weight: 400;
+}
+
+:root{
+    --color-principal: #FC5FA1;
+    --color-title-text: #EFEFEF;
+    --bg-color-section: #232629;
+    --text-secundario: #BFB0FF;
+    --color-tarjetas: #35393C;
+    --bg-section: #232629;
+}
+header{
+    background: url(../images/header-background.jpg);
+}
+/* BTN  E INPUTS */
+.btn-nav{
+    color: var(--color-title-text);
+    background-color: transparent;
+    border-radius: 25px;
+    border: 1px solid var(--color-title-text);
+    padding: 0.3rem 1.4rem;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    transition: all 250ms;
+    &:hover{
+        background-color: var(--color-title-text);
+        color: var(--bg-color-section);
+    }
+}
+.btn-section{
+    color: var(--color-title-text);
+    background-color: var(--color-principal);
+    border-radius: 30px;
+    border: 1px solid var(--color-principal);
+    font-family: 'Open Sans';
+    font-size: 14px;
+    padding: 0.8rem 1.9rem;
+    &:hover{
+        background-color: transparent;
+        color: var(--color-principal);
+        border: 1px solid var(--color-principal);
+    }
+}
+
+
+/* TITULOS Y TEXTOS */
+h1{
+    @include title();
+    font-size: 64px;
+}
+h2{
+    @include title();
+    font-size: 36px;
+}
+h3{
+    @include title();
+    font-size: 24px;
+}
+h4{
+    @include title();
+    font-size: 20px;
+}
+h5{
+    @include title();
+    font-size: 18px;
+}
+h6{
+    @include title();
+    color: var(--text-secundario);
+    font-size: 14px;
+}
+.text-nav{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: var(--color-title-text);
+    font-size: 14px;
+    transition: color 250ms;
+    &:hover,
+    &:focus{
+        color: var(--color-principal);
+        background-color: transparent;
+    }
+}
+.text-header{
+    @include text();
+    font-size: 18px;
+}
+.text-section{
+    @include text();
+    font-size: 16px;
+}
+.number{
+    @include title();
+    font-size: 56px;
+    line-height: 40px;
+}
+.text-testimonio{
+    @include text();
+    font-style: italic;
+    font-size: 1em;
+}
